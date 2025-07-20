@@ -183,7 +183,7 @@
         </div>
         <div class="p-4 card">
             <label for="file" class="form-label">السيرة الذاتية (CV)</label>
-            <input type="file" id="file" name="file" class="form-control" value="{{ old('file') }}">
+            <input type="file" id="file" name="filePath" class="form-control" value="{{ old('file') }}">
         </div>
         <div class="text-end">
             <button class="submit-btn" type="submit" id="submit-btn">إرسال</button>

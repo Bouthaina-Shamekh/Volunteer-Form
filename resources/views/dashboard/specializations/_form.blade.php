@@ -4,7 +4,7 @@
             <div class="pt-4 card-body">
                 <div class="row">
                     <div class="mb-4 col-md-6">
-                        <x-form.input label="الاسم" :value="$specialization->name" name="name" placeholder="هندسة...." required
+                        <x-form.input label="الاسم" :value="$specialization->name" name="name" placeholder="محمد ...." required
                             autofocus />
                     </div>
                     <div class="mb-4 col-md-6">
@@ -77,7 +77,7 @@
             </div>
         </div>
     </div>
-    @php $lastIndex = isset($specialization->hierarchies) ? count($specialization->hierarchies) : 0; @endphp
+    @php $lastIndex = isset($specialization->approvalHierarchies) ? count($specialization->approvalHierarchies) : 0; @endphp
     @push('scripts')
         <script src="{{ asset('assets/js/pages-account-settings-account.js') }}"></script>
         <script>

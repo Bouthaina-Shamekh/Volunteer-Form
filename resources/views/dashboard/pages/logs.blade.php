@@ -43,7 +43,7 @@
                                     </div>
                                     <div class="d-flex align-items-center justify-content-between mb-2">
                                         <div class="badge bg-label-{{ $color }} rounded d-flex align-items-center">
-                                            <a href="{{ route('dashboard.users.show', $log->user_id) }}" class="h6 mb-0 text-body">{{ $log->user ? $log->user->name : 'ضيف' }}</a>
+                                            <a href="{{ route('dashboard.users.show', $log->user_id ?? 0) }}" class="h6 mb-0 text-body">{{ $log->user ? $log->user->name : 'ضيف' }}</a>
                                         </div>
                                         <div class="badge bg-lighter rounded d-flex align-items-center">
                                             <span

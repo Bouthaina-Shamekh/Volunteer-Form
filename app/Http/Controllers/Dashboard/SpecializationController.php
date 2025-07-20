@@ -99,7 +99,7 @@ class SpecializationController extends Controller
         $request->validate([
             'name' => 'required|string|max:255',
             'is_active' => 'boolean',
-            'hierarchies' => 'nullable|array|min:1',
+            'hierarchies' => 'array|min:1',
             'hierarchies.*.role_name' => 'nullable|string|max:255',
             'hierarchies.*.order_sequence' => 'nullable|integer|min:1',
             'hierarchies.*.user_id' => 'nullable|exists:users,id',

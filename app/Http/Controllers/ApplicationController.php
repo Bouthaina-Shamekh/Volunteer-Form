@@ -51,15 +51,13 @@ class ApplicationController extends Controller
         try {
             $request['skills'] = is_array($request['skills']) ? implode(', ', $request['skills']) : null;
 
-            if ($request->file) {
-                $file = $request->file('file');
+            if ($request->filePath) {
+                $file = $request->file('filePath');
                 $file_name = time() . '_' . $file->getClientOriginalName();
                 $path = $file->storeAs('uploads', $file_name, 'public');
                 $request['file'] = $path;
             }
-
             $application = VolunteerApplication::create($request->all());
-
             $firstHierarchy = ApprovalHierarchy::where('specialization_id', $application->specialization_id)
                 ->orderBy('order_sequence')
                 ->first();

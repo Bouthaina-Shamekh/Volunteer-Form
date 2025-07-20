@@ -91,11 +91,13 @@
                 </a>
             </li>
         @endcan
-        <li class="menu-item {{ request()->is('constants/*') || request()->is('constants') ? 'active' : '' }}">
+        @can('view', 'App\\Models\\FormSettings')
+        <li class="menu-item {{ request()->is('form-settings/*') || request()->is('form-settings') ? 'active' : '' }}">
             <a href="{{ route('dashboard.form-settings.edit') }}" class="menu-link">
                 <i class="fa-solid fa-gear me-2"></i>
                 <div data-i18n="users">الاعدادات</div>
             </a>
         </li>
+        @endcan
     </ul>
 </aside>
