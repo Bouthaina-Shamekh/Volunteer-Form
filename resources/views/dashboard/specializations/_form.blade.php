@@ -4,7 +4,7 @@
             <div class="pt-4 card-body">
                 <div class="row">
                     <div class="mb-4 col-md-6">
-                        <x-form.input label="الاسم" :value="$specialization->name" name="name" placeholder="محمد ...." required
+                        <x-form.input label="الاسم" :value="$specialization->name" name="name" placeholder="هندسة...." required
                             autofocus />
                     </div>
                     <div class="mb-4 col-md-6">

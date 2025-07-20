@@ -54,7 +54,7 @@ class ApplicationController extends Controller
             if ($request->file) {
                 $file = $request->file('file');
                 $file_name = time() . '_' . $file->getClientOriginalName();
-                $path = Storage::storeAs('uploads', $file, $file_name)->disk('public');
+                $path = $file->storeAs('uploads', $file_name, 'public');
                 $request['file'] = $path;
             }
 
